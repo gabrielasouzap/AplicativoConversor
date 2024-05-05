@@ -3,7 +3,16 @@
     <style name="Base.Theme.AppConversor" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor" tools:targentApi="l">?attr/colorPrimary</item>
     </style>
 
     <style name="Theme.AppConversor" parent="Base.Theme.AppConversor" />
+
+
+    <!--SplashScreen-->
+    <style name="SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splashscren</item>
+        <item name="android:statusBarColor" tools:targentApi="l">?attr/colorPrimary</item>
+    </style>
+
 </resources>
