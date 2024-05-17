@@ -5,15 +5,166 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="80dp"
+    tools:context=".TemperaturaActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/changeButton"
+        android:layout_width="67dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:src="@android:drawable/ic_popup_sync"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Celsius"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeButton" />
+
+    <TextView
+        android:id="@+id/textFahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Fahrenheit"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCelsius" />
+
+    <TextView
+        android:id="@+id/textKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Kelvin"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFahrenheit" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="Clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textKelvin" />
+
+    <ViewSwitcher
+        android:id="@+id/switchCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/textCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/changeButton">
+
+        <TextView
+            android:id="@+id/disabledCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:ems="10"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/enabledCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backInput"
+            android:ems="10"
+            android:hint="number"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/cinza"
+            android:textSize="12sp" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/switchFanren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toEndOf="@+id/textCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/switchCelsius">
+
+        <TextView
+            android:id="@+id/disabledFahren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:ems="10"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/enabledFahren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backInput"
+            android:ems="10"
+            android:hint="number"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/cinza"
+            android:textSize="12sp" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/switchKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/textCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/changeButton">
+
+        <TextView
+            android:id="@+id/disabledKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:ems="10"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/enabledKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backInput"
+            android:ems="10"
+            android:hint="number"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/cinza"
+            android:textSize="12sp" />
+    </ViewSwitcher>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

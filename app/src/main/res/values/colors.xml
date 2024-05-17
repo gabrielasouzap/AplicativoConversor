@@ -3,4 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ciano">#5CC6BA</color>
+    <color name="backButton">#67d7ff</color>
+    <color name="backApp">#13079a</color>
+    <color name="backInput">#78f56f</color>
+    <color name="cinza">#D9D9D9</color>
+
+
 </resources>
