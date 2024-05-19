@@ -17,9 +17,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, TemperaturaActivity.class));
                 finish();
             }
-        },2000);
-
-
-
+        }, 2000);
     }
 }

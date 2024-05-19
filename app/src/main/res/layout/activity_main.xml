@@ -66,9 +66,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textKelvin" />
 
     <ViewSwitcher
+
         android:id="@+id/switchCelsius"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toEndOf="@+id/textCelsius"
@@ -76,14 +77,16 @@
 
         <TextView
             android:id="@+id/disabledCelcius"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/cinza"
+            android:breakStrategy="high_quality"
             android:ems="10"
             android:padding="5dp"
             android:text="0"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:visibility="visible" />
 
         <EditText
             android:id="@+id/enabledCelcius"
@@ -100,7 +103,7 @@
     </ViewSwitcher>
 
     <ViewSwitcher
-        android:id="@+id/switchFanrenheit"
+        android:id="@+id/switchFahrenheit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -134,16 +137,17 @@
     </ViewSwitcher>
 
     <ViewSwitcher
-        android:id="@+id/switchkelvin"
+        android:id="@+id/switchKelvin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="65dp"
         app:layout_constraintStart_toEndOf="@+id/textFahrenheit"
-        app:layout_constraintTop_toBottomOf="@+id/switchFanrenheit">
+        app:layout_constraintTop_toBottomOf="@+id/switchFahrenheit"
+        tools:ignore="UnknownId">
 
         <TextView
-            android:id="@+id/disabledFahren"
+            android:id="@+id/disabledKelvin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/cinza"
@@ -154,7 +158,7 @@
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/enabledFahren"
+            android:id="@+id/enabledKelvin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/backInput"
